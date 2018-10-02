@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoginRegisterTest</string>
+    <string name="welcome">Welcome</string>
+    <string name="register01">Register</string>
+    <string name="password01">Password</string>
+    <string name="email01">Email</string>
+    <string name="username01">Username</string>
+    <string name="email02">Email</string>
+    <string name="password02">Password</string>
+    <string name="login01">Login</string>
+    <string name="register_here01">Register Here!</string>
+    <string name="email_login">Email</string>
+</resources>

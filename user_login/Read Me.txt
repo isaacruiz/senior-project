@@ -1,0 +1,10 @@
+Scrapped the previous code, and we now have a working user database that is currently being hosted online via a free service.
+
+Purchased a domain that will be available soon:
+
+www.takea-hike.com
+
+I will need help integrating this into the current main folder, since I'm not familiar with the current code. I would like to prioritize
+the login activity in android studio, and once the user is logged in, they will then have access to the map activity.
+
+-Alex
