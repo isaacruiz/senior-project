@@ -1,28 +1,70 @@
 package com.project.senior.myapplication;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Main extends AppCompatActivity {
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        textView = (TextView) findViewById(R.id.text);
+
+    }
+
+    public void changeView(View View)
+    {
+        String button_text;
+        button_text =((Button)View).getText().toString();
+        if(button_text.equals("click to go to map"))
+        {
+            Intent m = new Intent(this,Map.class);
+            startActivity(m);
+        }
+        else if (button_text.equals("click third activity"))
+        {
+            Intent mass = new Intent(this,ThirdActivity.class);
+            startActivity(mass);
+
+        }
+    }
+}
+
+
+
+
+/*
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.maps.MapView;
 
-public class MainActivity extends AppCompatActivity {
+public class Main extends AppCompatActivity {
     private MapView mapView;
 
     @Override
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+
     /*
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-    */
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         Mapbox.getInstance(this, "pk.eyJ1IjoiaXJ1aXoiLCJhIjoiY2ptNm10ejFjMDF4MDNwcXgwMHp2emNvNiJ9.zQIfjDgu8IQt4u9e7Z2wRA");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -66,3 +108,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+*/

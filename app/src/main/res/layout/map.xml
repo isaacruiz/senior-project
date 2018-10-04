@@ -5,22 +5,35 @@
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Map">
 
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        mapbox:mapbox_cameraTargetLat="40.73581"
-        mapbox:mapbox_cameraTargetLng="-73.99155"
+        mapbox:mapbox_cameraTargetLat="30.268801"
+        mapbox:mapbox_cameraTargetLng="-97.739301"
         mapbox:mapbox_cameraZoom="11"
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/outdoors-v9" >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/editText"
             android:text="@string/button" />
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </com.mapbox.mapboxsdk.maps.MapView>
 
 </android.support.constraint.ConstraintLayout>
