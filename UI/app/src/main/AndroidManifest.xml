@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sergio.ui">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity_Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_Timeline"
+            android:theme="@style/ThemeTimeline"
+            />
+        <activity
+            android:name=".Activity_Friends"
+            android:theme="@style/ThemeFriends"
+            />
+        <activity
+            android:name=".Activity_Forum"
+            android:theme="@style/ThemeForum"
+            />
+        <activity
+            android:name=".Activity_Reports"
+            android:theme="@style/ThemeReports"
+            />
+        <activity
+            android:name=".Activity_Analytics"
+            android:theme="@style/ThemeAnalytics"
+            />
+        <activity
+            android:name=".Activity_Map"
+            android:theme="@style/ThemeMap"
+            />
+        <activity
+            android:name=".Activity_Settings"
+            android:theme="@style/ThemeSettings"
+            />
+        <activity
+            android:name=".Activity_Gallery">
+            android:theme="@style/ThemeGallery"
+        </activity>
+    </application>
+
+</manifest>
