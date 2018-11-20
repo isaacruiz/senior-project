@@ -9,15 +9,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity_Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapActivity"></activity>
-        <activity android:name=".TestActivity"></activity>
+        <activity
+            android:name=".Activity_Timeline"
+            android:theme="@style/ThemeTimeline"
+            />
+        <activity
+            android:name=".Activity_Friends"
+            android:theme="@style/ThemeFriends"
+            />
+        <activity
+            android:name=".Activity_Forum"
+            android:theme="@style/ThemeForum"
+            />
+        <activity
+            android:name=".Activity_Reports"
+            android:theme="@style/ThemeReports"
+            />
+        <activity
+            android:name=".Activity_Analytics"
+            android:theme="@style/ThemeAnalytics"
+            />
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/ThemeMap"
+            />
+        <activity
+            android:name=".Activity_Settings"
+            android:theme="@style/ThemeSettings"
+            />
+        <activity
+            android:name=".Activity_Gallery">
+            android:theme="@style/ThemeGallery"
+        </activity>
     </application>
 
 </manifest>
