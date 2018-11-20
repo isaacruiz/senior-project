@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Main">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,23 +17,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity_Timeline"
+            android:name=".TimelineActivity"
             android:theme="@style/ThemeTimeline"
             />
         <activity
-            android:name=".Activity_Friends"
+            android:name=".FriendsActivity"
             android:theme="@style/ThemeFriends"
             />
         <activity
-            android:name=".Activity_Forum"
+            android:name=".ForumActivity"
             android:theme="@style/ThemeForum"
             />
         <activity
-            android:name=".Activity_Reports"
+            android:name=".ReportsActivity"
             android:theme="@style/ThemeReports"
             />
         <activity
-            android:name=".Activity_Analytics"
+            android:name=".AnalyticsActivity"
             android:theme="@style/ThemeAnalytics"
             />
         <activity
@@ -41,11 +41,11 @@
             android:theme="@style/ThemeMap"
             />
         <activity
-            android:name=".Activity_Settings"
+            android:name=".SettingsActivity"
             android:theme="@style/ThemeSettings"
             />
         <activity
-            android:name=".Activity_Gallery">
+            android:name=".GalleryActivity">
             android:theme="@style/ThemeGallery"
         </activity>
     </application>
