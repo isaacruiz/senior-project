@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="button">Button</string>
+    <string name="map_button">Go to map</string>
+    <string name="test_view">Go to test view</string>
+    <string name="search_placeholder">Enter search term</string>
 </resources>
