@@ -28,6 +28,7 @@
         android:layout_marginLeft="8dp"
         android:layout_toStartOf="@+id/editText"
         android:layout_toLeftOf="@+id/editText"
+        android:text="search"
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toTopOf="@+id/editText" />
 
