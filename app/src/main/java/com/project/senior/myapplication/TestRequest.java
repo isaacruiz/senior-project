@@ -17,33 +17,30 @@ public class TestRequest {
     public String sendGet() throws Exception {
 
         String url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=Mission&q[country_cont]=United%20States&q[state_cont]=Texas&radius=200&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
-        try {
-            URL obj = new URL(url);
-            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
-            // optional default is GET
-            con.setRequestMethod("GET");
+        // optional default is GET
+        con.setRequestMethod("GET");
 
 
-            int responseCode = con.getResponseCode();
-            Log.d("Request","\nSending 'GET' request to URL : " + url);
-            Log.d("Request","Response Code : " + responseCode);
+        int responseCode = con.getResponseCode();
+        Log.d("Request","\nSending 'GET' request to URL : " + url);
+        Log.d("Request","Response Code : " + responseCode);
 
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
 
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-            SystemClock.sleep(7000);
-
-            return response.toString();
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
         }
-        catch(Exception e){
-            return e.getMessage();
-        }
+        in.close();
+        String result = response.toString();
+
+        return result;
+
     }
+
 }

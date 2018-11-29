@@ -60,4 +60,13 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/searchCountry"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/displayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="display"
+        app:layout_constraintEnd_toEndOf="@+id/searchBtn"
+        app:layout_constraintTop_toBottomOf="@+id/searchBtn" />
 </android.support.constraint.ConstraintLayout>

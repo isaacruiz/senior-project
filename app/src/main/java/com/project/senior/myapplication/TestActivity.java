@@ -16,6 +16,7 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
 
     //private TestActivityListener listener;
     private TestRequest r;
+    private String response = "Dummy Text";
 
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -23,6 +24,8 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
         EditText et = (EditText)findViewById(R.id.searchCountry);
         TextView tv = (TextView)findViewById(R.id.textOutput);
         Button searchBtn = (Button)findViewById(R.id.searchBtn);
+        Button displayBtn = (Button)findViewById(R.id.displayBtn);
+
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,19 +33,24 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
                 //r = new Request("United States", "Texas", "Mission", 200, this);
                 //r.execute();
                 r = new TestRequest();
-                String response = "blah";
-
+                Log.d("Test", "Clicked search");
                 try{
                     response = r.sendGet();
-                    Log.d("Request","Was able to get response!");
+
                 }
                 catch(Exception e){
                     response = e.getMessage();
-                    Log.d("Request", "Was not able to get response");
                 }
+
+            }
+        });
+        displayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 tv.setText(response);
             }
         });
+
     }
 }
 
