@@ -3,6 +3,7 @@ package com.project.senior.myapplication;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,20 +15,32 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
 
 
     //private TestActivityListener listener;
-    private Request r;
+    private TestRequest r;
 
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        EditText et = (EditText)findViewById(R.id.requestText);
+        EditText et = (EditText)findViewById(R.id.searchCountry);
         TextView tv = (TextView)findViewById(R.id.textOutput);
         Button searchBtn = (Button)findViewById(R.id.searchBtn);
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv.setText(et.getText());
+                //tv.setText(et.getText());
                 //r = new Request("United States", "Texas", "Mission", 200, this);
                 //r.execute();
+                r = new TestRequest();
+                String response = "blah";
+
+                try{
+                    response = r.sendGet();
+                    Log.d("Request","Was able to get response!");
+                }
+                catch(Exception e){
+                    response = e.getMessage();
+                    Log.d("Request", "Was not able to get response");
+                }
+                tv.setText(response);
             }
         });
     }

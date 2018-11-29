@@ -48,6 +48,10 @@
             android:name=".GalleryActivity">
             android:theme="@style/ThemeGallery"
         </activity>
+        <activity
+            android:name=".TestActivity">
+            android:theme="@style/ThemeGallery"
+        </activity>
     </application>
 
 </manifest>
