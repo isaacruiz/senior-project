@@ -25,16 +25,13 @@ public class MapActivity extends AppCompatActivity{
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(MapboxMap mapboxMap) {
-                /*
+
                 //Display GPS location on map
-                try {
-                    LocationComponent locationComponent = mapboxMap.getLocationComponent();
-                    locationComponent.activateLocationComponent(this)
-                }
-                catch(SecurityException e){
-                    Log.d("Security Error", e.getMessage());
-                }
+                /*
+                LocationComponent locationComponent = mapboxMap.getLocationComponent();
+                locationComponent.activateLocationComponent(this);
                 */
+
 
                 float[][] coordinates = {{26.303854f, -98.178339f}, {26.301924f, -98.165765f}, {26.315847f, -98.162577f}};
                 drawPins(mapboxMap, coordinates); //Draw a set of coordinates

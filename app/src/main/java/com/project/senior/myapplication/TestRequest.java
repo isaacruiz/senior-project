@@ -1,46 +1,84 @@
 package com.project.senior.myapplication;
 
+import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.util.Log;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
+
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class TestRequest {
+public class TestRequest extends AsyncTask<String, String, String> {
 
-    // HTTP GET request
-    public String sendGet() throws Exception {
-
-        String url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=Mission&q[country_cont]=United%20States&q[state_cont]=Texas&radius=200&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-        // optional default is GET
-        con.setRequestMethod("GET");
+    //Callback interface
+    static interface RequestHandlerCallback {
+        void Callback(String JSONResult);
+    }
 
 
-        int responseCode = con.getResponseCode();
-        Log.d("Request","\nSending 'GET' request to URL : " + url);
-        Log.d("Request","Response Code : " + responseCode);
+    private String city;
+    private String state;
+    private String country;
+    private String endpoint = "https://trailapi-trailapi.p.mashape.com/";
+    private String query;
+    private String key = "&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
+    private RequestHandlerCallback callBackObject;
 
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        StringBuffer response = new StringBuffer();
+    public TestRequest(String city, String state, String country){
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        query = "?q[city_cont]=" + city + "&q[country_cont]=" + country + "&q[state_cont]=" + state + "&radius=200";
+    }
 
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
+
+    @Override
+    protected String doInBackground(String... strings) {
+        try {
+            //Setup connection
+            URL url = new URL(endpoint + query + key);
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.connect();
+
+            //Read result from API request
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String value = getJSonStringFromBuffer(br);
+            JSONObject json = new JSONObject(value);
+            String json_string = json.toString();
+            System.out.println("This is the result: " + json_string);
+
+            return value;
         }
-        in.close();
-        String result = response.toString();
 
-        return result;
+        catch(Exception e){
+            return (e.getMessage());
+        }
+    }
 
+
+
+
+    private String getJSonStringFromBuffer(BufferedReader br) throws Exception {
+        StringBuffer buffer = new StringBuffer();
+        String line;
+        while ((line = br.readLine()) != null) {
+            buffer.append(line + "\n");
+        }
+        if (buffer.length() == 0) {
+            return null;
+        }
+        return buffer.toString();
     }
 
 }

@@ -10,21 +10,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class TestActivity extends Activity {//implements Request.RequestCallback {
+public class TestActivity extends Activity{//implements Request.RequestCallback {
 
 
 
     //private TestActivityListener listener;
-    private TestRequest r;
+
     private String response = "Dummy Text";
+
 
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        EditText et = (EditText)findViewById(R.id.searchCountry);
+        EditText etCountry = (EditText)findViewById(R.id.searchCountry);
+        EditText etState = (EditText)findViewById(R.id.searchState);
+        EditText etCity = (EditText)findViewById(R.id.searchCity) ;
+
         TextView tv = (TextView)findViewById(R.id.textOutput);
         Button searchBtn = (Button)findViewById(R.id.searchBtn);
         Button displayBtn = (Button)findViewById(R.id.displayBtn);
+
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,15 +37,16 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
                 //tv.setText(et.getText());
                 //r = new Request("United States", "Texas", "Mission", 200, this);
                 //r.execute();
-                r = new TestRequest();
-                Log.d("Test", "Clicked search");
-                try{
-                    response = r.sendGet();
+                String country = etCountry.getText().toString();
+                String state = etState.getText().toString();
+                String city = etCity.getText().toString();
 
-                }
-                catch(Exception e){
-                    response = e.getMessage();
-                }
+
+                TestRequest tr = new TestRequest(city, state, country);
+                Log.d("Test", "Clicked search");
+                tr.execute();
+
+
 
             }
         });
@@ -52,6 +58,7 @@ public class TestActivity extends Activity {//implements Request.RequestCallback
         });
 
     }
+
 }
 
 /*
