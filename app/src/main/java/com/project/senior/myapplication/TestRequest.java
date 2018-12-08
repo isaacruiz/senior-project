@@ -1,30 +1,15 @@
 package com.project.senior.myapplication;
 
 import android.os.AsyncTask;
-import android.os.SystemClock;
-import android.util.Log;
 
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 
-
-import javax.net.ssl.HttpsURLConnection;
-
 public class TestRequest extends AsyncTask<String, String, String> {
-
-    //Callback interface
-    static interface RequestHandlerCallback {
-        void Callback(String JSONResult);
-    }
-
 
     private String city;
     private String state;
@@ -32,12 +17,13 @@ public class TestRequest extends AsyncTask<String, String, String> {
     private String endpoint = "https://trailapi-trailapi.p.mashape.com/";
     private String query;
     private String key = "&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
-    private RequestHandlerCallback callBackObject;
+    private RequestCallback callback;
 
-    public TestRequest(String city, String state, String country){
+    public TestRequest(String city, String state, String country, RequestCallback callback){
         this.city = city;
         this.state = state;
         this.country = country;
+        this.callback = callback;
         query = "?q[city_cont]=" + city + "&q[country_cont]=" + country + "&q[state_cont]=" + state + "&radius=200";
     }
 
@@ -53,12 +39,12 @@ public class TestRequest extends AsyncTask<String, String, String> {
 
             //Read result from API request
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String value = getJSonStringFromBuffer(br);
-            JSONObject json = new JSONObject(value);
+            String result = getJSonStringFromBuffer(br);
+            JSONObject json = new JSONObject(result);
             String json_string = json.toString();
             System.out.println("This is the result: " + json_string);
-
-            return value;
+            System.out.println("This is the result: " + result);
+            return result;
         }
 
         catch(Exception e){
@@ -66,8 +52,10 @@ public class TestRequest extends AsyncTask<String, String, String> {
         }
     }
 
-
-
+    @Override
+    protected void onPostExecute(String result) {
+        callback.completedRequest(result);
+    }
 
     private String getJSonStringFromBuffer(BufferedReader br) throws Exception {
         StringBuffer buffer = new StringBuffer();

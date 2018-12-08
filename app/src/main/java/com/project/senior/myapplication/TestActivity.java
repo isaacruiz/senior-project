@@ -1,6 +1,7 @@
 package com.project.senior.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -10,14 +11,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class TestActivity extends Activity{//implements Request.RequestCallback {
+public class TestActivity extends Activity implements RequestCallback{
 
 
-
+    String country, city, state, result;
+    private TestRequest tr;
+    private RequestCallback cb;
     //private TestActivityListener listener;
 
     private String response = "Dummy Text";
 
+    /* Outputs JSON result to text view, but infinitely calls itself
+    public void completedRequest(String json){
+        TestRequest tr = new TestRequest(city, state, country, this);
+        tr.execute();
+        TextView tv = (TextView)findViewById(R.id.textOutput);
+        tv.setText(json);
+    }
+    */
+    public void completedRequest(String json) {
+        TextView tv = (TextView)findViewById(R.id.textOutput);
+        tv.setText(json);
+    }
 
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -37,16 +52,19 @@ public class TestActivity extends Activity{//implements Request.RequestCallback 
                 //tv.setText(et.getText());
                 //r = new Request("United States", "Texas", "Mission", 200, this);
                 //r.execute();
-                String country = etCountry.getText().toString();
-                String state = etState.getText().toString();
-                String city = etCity.getText().toString();
-
-
-                TestRequest tr = new TestRequest(city, state, country);
-                Log.d("Test", "Clicked search");
+                country = etCountry.getText().toString();
+                state = etState.getText().toString();
+                city = etCity.getText().toString();
+                TestRequest tr = new TestRequest(city, state, country, new RequestCallback() {
+                    @Override
+                    public void completedRequest(String result) {
+                        tv.setText(result);
+                    }
+                });
                 tr.execute();
 
 
+                Log.d("Test", "Clicked search");
 
             }
         });
@@ -157,7 +175,7 @@ public class TestActivity extends Fragment
 
 
     @Override
-    public void Callback(String JSONResult) {
+    public void completedRequest(String JSONResult) {
         if(this.progressBar!=null){
             progressBar.setVisibility(View.INVISIBLE);
         }
