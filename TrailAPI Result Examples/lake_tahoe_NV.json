@@ -1,0 +1,189 @@
+{
+    "places":[
+        {
+            "city":"South Lake Tahoe",
+            "state":"Nevada",
+            "country":"United States",
+            "name":"Mr. Toad's Wild Ride",
+            "parent_id":null,
+            "unique_id":2758,
+            "directions":"Toads wild ride starts in South Lake Tahoe, California. The best place to start is at the bottom where it ends.&lt;br \/&gt;&lt;br \/&gt;From highway 50 going south into Myers take a left on Pioneer(Refer to the Map), which is the only stop light in town.&lt;br \/&gt;&lt;br \/&gt;Follow Pioneer for about 3\/4 of a mile and take a right on Oneidis. Go through the residential area and look for a turn off on the dirt after you go past the forest service gate. &lt;br \/&gt;&lt;br \/&gt;Now you are at the bottom of Toads Ride. Park here and this is where the ride begins. ",
+            "lat":38.86865,
+            "lon":-119.98952,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Mr. Toad's Wild Ride",
+                    "unique_id":"1-1203",
+                    "place_id":2758,
+                    "activity_type_id":5,
+                    "activity_type_name":"mountain biking",
+                    "url":"http:\/\/www.singletracks.com\/item.php?c=1&i=1203",
+                    "attribs":{
+                        "\"length\"":"\"20\"",
+                        "\"nightride\"":"null"
+                    },
+                    "description":"Mr. Toads Wild Ride is one of Lake Tahoe's Premier technical rides. This ride is one of my favorites! It is one of the finest downhills in the Lake Tahoe region as well. It is a somewhat difficult one with over 3200' vertical feet of climbing involved, but once you get to the top it is all downhill! The descent from Tucker flat is a technical test piece followed by some fantastic single track riding down the Saxon Creek drainage. The trail combines expansive views, meadows, and forests into one special ride. The downhill is mostly all single track too and very technical in sections. Total riding distance on this ride is a little over 20 miles. You will want to take a full camel bag or two bike bottles.",
+                    "length":20,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:35Z",
+                        "id":5,
+                        "name":"mountain biking",
+                        "updated_at":"2012-08-15T16:12:35Z"
+                    },
+                    "thumbnail":"http:\/\/images.singletracks.com\/2010\/01\/Summit-0.jpg",
+                    "rank":null,
+                    "rating":4.56
+                },
+                {
+                    "name":"Mr. Toad's Wild Ride",
+                    "unique_id":"2-643",
+                    "place_id":2758,
+                    "activity_type_id":2,
+                    "activity_type_name":"hiking",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=3&i=643",
+                    "attribs":{
+                        "\"length\"":"\"20\""
+                    },
+                    "description":"Mr. Toad's Wild Ride features 20 miles of hiking trails near South Lake Tahoe, NV.",
+                    "length":20,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:21Z",
+                        "id":2,
+                        "name":"hiking",
+                        "updated_at":"2012-08-15T16:12:21Z"
+                    },
+                    "thumbnail":null,
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"South Lake Tahoe",
+            "state":"Nevada",
+            "country":"United States",
+            "name":"Genoa Peak",
+            "parent_id":null,
+            "unique_id":2759,
+            "directions":"From South Lake Tahoe, take Kingsbury Grade (SR 207) and turn left on North Benjamin Road, which turns into Andria Drive. Continue to the end of the pavement and park. Take Genoa Peak Road 14N32. A longer trip is possible if you take two cars. Park the second vehicle off of U.S. HWY 50 behind the Nevada Department of Transportation Station, one-fourth mile south of the SR 28 and U.S. HWY 50 junction.",
+            "lat":38.99653,
+            "lon":-119.8967,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Genoa Peak",
+                    "unique_id":"1-1210",
+                    "place_id":2759,
+                    "activity_type_id":5,
+                    "activity_type_name":"mountain biking",
+                    "url":"http:\/\/www.singletracks.com\/item.php?c=1&i=1210",
+                    "attribs":{
+                        "\"length\"":"\"11\"",
+                        "\"nightride\"":"null"
+                    },
+                    "description":"A moderate ride along a ridgeline with scenic views of the Lake Tahoe Basin to the west and the Carson Valley to the east. Several spurs off the main road access peaks with Genoa Peak being the highest (9,150'). An excellent ten-mile loop off the main ridge is possible.",
+                    "length":11,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:35Z",
+                        "id":5,
+                        "name":"mountain biking",
+                        "updated_at":"2012-08-15T16:12:35Z"
+                    },
+                    "thumbnail":"http:\/\/images.singletracks.com\/2009\/trails\/01\/1115139234.jpg",
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"South Lake Tahoe",
+            "state":"Nevada",
+            "country":"United States",
+            "name":"Lam Watah Interpretive Trail",
+            "parent_id":null,
+            "unique_id":2760,
+            "directions":"From the California\/Nevada State Line on Highway 50 in South Lake Tahoe: Go about a half a mile from the state border on 50 into Nevada and turn towards the lake onto Kahale Drive. There is a parking lot on your immediate right where the trail head is located.",
+            "lat":0,
+            "lon":0,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Lam Watah Interpretive Trail",
+                    "unique_id":"1-1266",
+                    "place_id":2760,
+                    "activity_type_id":5,
+                    "activity_type_name":"mountain biking",
+                    "url":"http:\/\/www.singletracks.com\/item.php?c=1&i=1266",
+                    "attribs":{
+                        "\"length\"":"\"4\"",
+                        "\"nightride\"":"null"
+                    },
+                    "description":"This is a senic beginner trail. Only two small technical areas. Most of the trail is hardpack dirt that wanders through a pine forest. Adjacent to the the trail is a campground and a beach for a great view of Lake Tahoe and surrounding mountains. This is a decent trail if you are visiting tahoe and did not bring any gear and are renting a bike (like me). The scenery and some very fast riding can keep you busy for a while.",
+                    "length":4,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:35Z",
+                        "id":5,
+                        "name":"mountain biking",
+                        "updated_at":"2012-08-15T16:12:35Z"
+                    },
+                    "thumbnail":"http:\/\/images.singletracks.com\/2009\/trails\/01\/1118809139.jpg",
+                    "rank":null,
+                    "rating":3
+                }
+            ]
+        },
+        {
+            "city":"South Lake Tahoe",
+            "state":"Nevada",
+            "country":"United States",
+            "name":"Tahoe Rim Trail: Nevada",
+            "parent_id":null,
+            "unique_id":14359,
+            "directions":"NV",
+            "lat":39.307686,
+            "lon":-119.908208,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Tahoe Rim Trail: Nevada",
+                    "unique_id":"2-3304",
+                    "place_id":14359,
+                    "activity_type_id":2,
+                    "activity_type_name":"hiking",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=3&i=3304",
+                    "attribs":{
+                        "\"length\"":"\"40\""
+                    },
+                    "description":"Part of the Tahoe Rim Trail is in Nevada, and the rest of it is in California. The trail meanders through the mountains and offers gorgeous views of Lake Tahoe below and the surrounding mountains.",
+                    "length":40,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:21Z",
+                        "id":2,
+                        "name":"hiking",
+                        "updated_at":"2012-08-15T16:12:21Z"
+                    },
+                    "thumbnail":null,
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        }
+    ]
+}

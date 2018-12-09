@@ -1,0 +1,183 @@
+{
+    "places":[
+        {
+            "city":"Big Bend National Park",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Big Bend National Park",
+            "parent_id":null,
+            "unique_id":6251,
+            "directions":"Several highways lead to Big Bend National Park: TX 118 from Alpine to Study Butte or FM 170 from Presidio to Study Butte (then 26 miles east to park headquarters) or US 90 or US 385 to Marathon (then 70 miles south to park headquarters).&lt;br \/&gt;&lt;br \/&gt;Source: National Park Service",
+            "lat":29.288151,
+            "lon":-103.2116,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Big Bend National Park",
+                    "unique_id":"2-3060",
+                    "place_id":6251,
+                    "activity_type_id":2,
+                    "activity_type_name":"hiking",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=3&i=3060",
+                    "attribs":{
+                        "\"length\"":"\"0\""
+                    },
+                    "description":"Big Bend is a hiker's paradise containing the largest expanse of roadless public lands in Texas. More than 150 miles of trails offer opportunities for day hikes or backpacking trips. Elevations range from 1,800 feet along the Rio Grande to 7,832 feet on Emory Peak in the Chisos Mountains. Elevation changes produce an exception variety of plants, animals, and scenic vistas. Generally, hikers can expect a 20\u00b0F temperature difference between low and high elevation hiking areas.&lt;br \/&gt;<br \/>Source: National Park Service",
+                    "length":0,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:21Z",
+                        "id":2,
+                        "name":"hiking",
+                        "updated_at":"2012-08-15T16:12:21Z"
+                    },
+                    "thumbnail":"http:\/\/images.tripleblaze.com\/2012\/05\/Big-Bend-NP-0.jpg",
+                    "rank":null,
+                    "rating":5
+                }
+            ]
+        },
+        {
+            "city":"Big Bend National Park",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Chisos Basin",
+            "parent_id":null,
+            "unique_id":9059,
+            "directions":"Visit this site for directions:&lt;br \/&gt;&lt;br \/&gt;www.nps.gov\/bibe\/planyourvisit\/directions.htm",
+            "lat":29.275,
+            "lon":-103.304167,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Chisos Basin",
+                    "unique_id":"3-3470",
+                    "place_id":9059,
+                    "activity_type_id":6,
+                    "activity_type_name":"camping",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=2&i=3470",
+                    "attribs":{
+                        "\"length\"":"\"3\""
+                    },
+                    "description":"Very scenic and popular campground since it is a higher elevation (and cooler) than the surrounding desert. Many hiking trails of varying lengths nearby.",
+                    "length":3,
+                    "activity_type":{
+                        "created_at":"2012-08-15T17:31:31Z",
+                        "id":6,
+                        "name":"camping",
+                        "updated_at":"2012-08-15T17:31:31Z"
+                    },
+                    "thumbnail":"http:\/\/images.tripleblaze.com\/2011\/03\/3986-1300353936-0.jpg",
+                    "rank":null,
+                    "rating":5
+                }
+            ]
+        },
+        {
+            "city":"Big Bend Nat. Park",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Cottonwood",
+            "parent_id":null,
+            "unique_id":9578,
+            "directions":"From Interstate 10, take State Highway 385 south to Fort Stockton and onto Marathon. From Marathon, drive 40 miles south on State Highway 385 to the north entrance of Big Bend National Park. Drive straight for 26 miles to Park Headquarters at Panther Junction. Turn right at the intersection and go 13 miles west. Take a left at the Santa Elena Canyon turn-off and drive 23 miles to Cottonwood Campground.",
+            "lat":29.136944,
+            "lon":-103.522222,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Cottonwood",
+                    "unique_id":"3-3992",
+                    "place_id":9578,
+                    "activity_type_id":6,
+                    "activity_type_name":"camping",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=2&i=3992",
+                    "attribs":{
+                        "\"length\"":"\"3\""
+                    },
+                    "description":"Cottonwood Campground is a quiet desert oasis in the southwestern corner of Big Bend National Park. Conveniently located between the Castolon Historic District, the scenic Santa Elena Canyon and the tail end of the Ross Maxwell Scenic Drive, this small, 31-site campground is one of the least-known and typically least-occupied campgrounds in the park. The group site is the only reservable campsite in the facility and is tent-only; individual campsites are first-come, first-served year-round.      Cottonwood gets its name from the cottonwood trees that surround and provide shade for the facility nearby the Rio Grande River. A general store and visitor center -- a converted former military outpost -- are also nearby.       The campground is at an elevation of 1,900 ft. It is relatively cool in the peak seasons of fall and winter due to cold air sinking into the lower elevations.",
+                    "length":3,
+                    "activity_type":{
+                        "created_at":"2012-08-15T17:31:31Z",
+                        "id":6,
+                        "name":"camping",
+                        "updated_at":"2012-08-15T17:31:31Z"
+                    },
+                    "thumbnail":"http:\/\/images.tripleblaze.com\/2011\/03\/3992-1300360043-0.jpg",
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"Big Bend Nat. Park",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Rio Grande Village (big Bend)",
+            "parent_id":null,
+            "unique_id":9641,
+            "directions":"From Interstate 10, take State Highway 385 south to Fort Stockton and onto Marathon. From Marathon, drive 40 miles south on State Highway 385 to the north entrance of Big Bend National Park. Drive straight for 26 miles to Park Headquarters at Panther Junction. Turn left and proceed for 20 miles to the campground.",
+            "lat":29.1825,
+            "lon":-102.960833,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Rio Grande Village (big Bend)",
+                    "unique_id":"3-4055",
+                    "place_id":9641,
+                    "activity_type_id":6,
+                    "activity_type_name":"camping",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=2&i=4055",
+                    "attribs":{
+                        "\"length\"":"\"3\""
+                    },
+                    "description":"Located on the banks of the famous Rio Grande River, Rio Grande Village Campground is one of the most popular campgrounds in Big Bend National Park, especially for those traveling in large recreational vehicles. It is conveniently located next to Boquillas Canyon and Hot Springs, and is situated close to two of the busiest backcountry roads in Big Bend: Old Ore Road and River Road. Rio Grande Village has an outstanding view of the Sierra del Carmen mountains located in Mexico to the east, which light up with hues of reds and orange during sunset.      The national park is named for a curve in the Rio Grande River called the &amp;quot;big bend.&amp;quot; For 1,250 miles, the river is an International Boundary between the United States and Mexico.",
+                    "length":3,
+                    "activity_type":{
+                        "created_at":"2012-08-15T17:31:31Z",
+                        "id":6,
+                        "name":"camping",
+                        "updated_at":"2012-08-15T17:31:31Z"
+                    },
+                    "thumbnail":"http:\/\/images.tripleblaze.com\/2011\/03\/4055-1300188044-0.jpg",
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"Big Spring",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Big Spring State Park",
+            "parent_id":null,
+            "unique_id":19351,
+            "directions":"No. 1 Scenic Drive&lt;br \/&gt;Big Spring, TX 79720&lt;br \/&gt;Latitude: 32.229574&lt;br \/&gt;Longitude: -101.48968",
+            "lat":32.229205,
+            "lon":-101.491473,
+            "description":"Dramatic views off of the 200-foot bluff and from the CCC-built loop road is one of the featured attractions of this 382-acre park. Early morning or sunset, joggers, walkers and cyclists circle the loop, enjoying these views as they exercise. An elaborate Fourth of July fireworks display is one of the largest in the region. Other activities include picnicking, nature study and sightseeing.",
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "places":[
+        {
+            "city":"Mission, Tx",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Mission Trails",
+            "parent_id":null,
+            "unique_id":3556,
+            "directions":"www.missiontrails.org&lt;br \/&gt;&lt;br \/&gt;&lt;br \/&gt;&lt;br \/&gt;The Mission Hike and Bike Park is located in Mission off of Expressway 83.  To get to the park, take Expressway 83 to Mission.  Take the Conway exit.  Turn south on FM 1016 (Conway) and go down about 1\/2 mile.  You will see a parking lot on your right side.  You will see the Mission Nature Park sign when you enter the parking lot.",
+            "lat":26.19237,
+            "lon":-98.3304,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Mission Trails",
+                    "unique_id":"1-4036",
+                    "place_id":3556,
+                    "activity_type_id":5,
+                    "activity_type_name":"mountain biking",
+                    "url":"http:\/\/www.singletracks.com\/item.php?c=1&i=4036",
+                    "attribs":{
+                        "\"length\"":"\"6\"",
+                        "\"nightride\"":"null"
+                    },
+                    "description":"The paved trail starts on the southwest side of the parking lot.  One of the singletrack trails, the Up and Over, starts on the south side of the parking lot.  Most of the other singletrack trails are further into the park, so you will need to ride a bit to get to the trailheads.  See the trail map for location of the trails.",
+                    "length":6,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:35Z",
+                        "id":5,
+                        "name":"mountain biking",
+                        "updated_at":"2012-08-15T16:12:35Z"
+                    },
+                    "thumbnail":"http:\/\/images.singletracks.com\/2015\/01\/mobile-1420421775.jpg",
+                    "rank":null,
+                    "rating":3.33
+                }
+            ]
+        },
+        {
+            "city":"Mission",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Bentsen-Rio Grande Valley State Park",
+            "parent_id":null,
+            "unique_id":19349,
+            "directions":"2800 S. Bentsen Palm Drive (FM 2062)&lt;br \/&gt;Mission, TX 78572&lt;br \/&gt;Latitude: 26.186987&lt;br \/&gt;Longitude: -98.381888",
+            "lat":26.184993,
+            "lon":-98.381616,
+            "description":"World Birding Center Inc. Logo 200x129As part of the World Birding Center, Bentsen-Rio Grande Valley State Park is a world-class destination for bird-watching. The Rio Grande Valley hosts one of the most spectacular convergences of birds on earth with more than 500 species documented in this unique place. Bentsen-Rio Grande Valley State Park alone has an impressive list of 340 species recorded within the park's boundaries. Birders have a chance to see migratory birds during their yearly migrations over the valley including flocks of thousands of hawks from the park's Hawk Tower in the spring and fall. Some birders travel to the Bentsen to see bird species they can't find anyplace else in the country - from the Green Jay and the Buff-bellied Hummingbird to the Great Kiskadee and the Altamira Oriole.",
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Bentsen-Rio Grande Valley State Park",
+                    "unique_id":"3-9003",
+                    "place_id":19349,
+                    "activity_type_id":6,
+                    "activity_type_name":"camping",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=2&i=9003",
+                    "attribs":{
+                        "\"length\"":"\"3\""
+                    },
+                    "description":"World Birding Center Inc. Logo 200x129As part of the World Birding Center, Bentsen-Rio Grande Valley State Park is a world-class destination for bird-watching. The Rio Grande Valley hosts one of the most spectacular convergences of birds on earth with more than 500 species documented in this unique place. Bentsen-Rio Grande Valley State Park alone has an impressive list of 340 species recorded within the park's boundaries. Birders have a chance to see migratory birds during their yearly migrations over the valley including flocks of thousands of hawks from the park's Hawk Tower in the spring and fall. Some birders travel to the Bentsen to see bird species they can't find anyplace else in the country - from the Green Jay and the Buff-bellied Hummingbird to the Great Kiskadee and the Altamira Oriole.",
+                    "length":3,
+                    "activity_type":{
+                        "created_at":"2012-08-15T17:31:31Z",
+                        "id":6,
+                        "name":"camping",
+                        "updated_at":"2012-08-15T17:31:31Z"
+                    },
+                    "thumbnail":null,
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"Mission",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Mission trails",
+            "parent_id":null,
+            "unique_id":25107,
+            "directions":"Military hwy &amp; 83",
+            "lat":0,
+            "lon":0,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+
+            ]
+        }
+    ]
+}

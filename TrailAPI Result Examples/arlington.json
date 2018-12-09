@@ -1,0 +1,107 @@
+{
+    "places":[
+        {
+            "city":"Arlington",
+            "state":"Texas",
+            "country":"United States",
+            "name":"River Legacy",
+            "parent_id":null,
+            "unique_id":3554,
+            "directions":"In River Legacy Park. Intersection of North Green Oaks and Cooper Street. Follow Cooper north until it intersects Green Oaks. Left on Green Oaks. Park entrance is first right. Inside the park, take the first left, follow the road, then take a left into the parking loop at the trailhead.",
+            "lat":32.79321,
+            "lon":-97.11691,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"River Legacy",
+                    "unique_id":"1-3759",
+                    "place_id":3554,
+                    "activity_type_id":5,
+                    "activity_type_name":"mountain biking",
+                    "url":"http:\/\/www.singletracks.com\/item.php?c=1&i=3759",
+                    "attribs":{
+                        "\"length\"":"\"10\"",
+                        "\"nightride\"":"null"
+                    },
+                    "description":"With two trail ratings (Blue and Red) it is compatible with both beginner and seasoned riders. Following the blue arrows provides a great cross country experience with only nominal challenges and always a bypass for anything a beginner rider might find beyond their skills. The optional red trails (EKG, Roller Coaster, and Fun Town) offer significantly more challenging features. EKG in particular, is aptly named for the cardio workout you will endure while traversing it. Home to the River Legacy River Rats (join our Facebook page), this trail is very well maintained and uniquely located in a wilderness area located in the middle of the Dallas\/Fort Worth area. This trail is a popular skills builder but is also popular for more advanced riders looking for excellent cross country &quot;speed and flow&quot;. The advanced sections like EKG draw recreational and race oriented riders seeking a serious workout and training opportunity. Come out and check out this trail, I promise you will return time and again.",
+                    "length":10,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:35Z",
+                        "id":5,
+                        "name":"mountain biking",
+                        "updated_at":"2012-08-15T16:12:35Z"
+                    },
+                    "thumbnail":"http:\/\/images.singletracks.com\/2014\/04\/Highspeed70658lw.jpg",
+                    "rank":null,
+                    "rating":3.8
+                },
+                {
+                    "name":"River Legacy",
+                    "unique_id":"2-1523",
+                    "place_id":3554,
+                    "activity_type_id":2,
+                    "activity_type_name":"hiking",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=3&i=1523",
+                    "attribs":{
+                        "\"length\"":"\"4\""
+                    },
+                    "description":"River Legacy features 4 miles of hiking trails near Arlington, TX.",
+                    "length":4,
+                    "activity_type":{
+                        "created_at":"2012-08-15T16:12:21Z",
+                        "id":2,
+                        "name":"hiking",
+                        "updated_at":"2012-08-15T16:12:21Z"
+                    },
+                    "thumbnail":null,
+                    "rank":null,
+                    "rating":0
+                }
+            ]
+        },
+        {
+            "city":"Arlington",
+            "state":"Texas",
+            "country":"United States",
+            "name":"Dallas \/ Arlington Koa",
+            "parent_id":null,
+            "unique_id":9580,
+            "directions":"Located midway between Dallas and Forth Worth. From Dallas: On I-20, take Exit 449 (Cooper St). From Fort Worth: On I-20, take 449B (Cooper St). Go north on Cooper for 1.8 miles. The campground will be on the right. From I-30: Take Exit 27 (Cooper St), proceed south on Cooper for 4.2 miles (just across the street from Pep Boys).",
+            "lat":32.7,
+            "lon":-97.122222,
+            "description":null,
+            "date_created":null,
+            "children":[
+
+            ],
+            "activities":[
+                {
+                    "name":"Dallas \/ Arlington Koa",
+                    "unique_id":"3-3994",
+                    "place_id":9580,
+                    "activity_type_id":6,
+                    "activity_type_name":"camping",
+                    "url":"http:\/\/www.tripleblaze.com\/trail.php?c=2&i=3994",
+                    "attribs":{
+                        "\"length\"":"\"3\""
+                    },
+                    "description":"The Dallas Arlington KOA is your Texas camping home! This  Dallas-Fort Worth  area campground offers many amenities and area attractions. With  100-foot pull-through  and 50-amp sites available, our campground is truly  &amp;quot;Big Rig Friendly&amp;quot;  ! The Dallas Arlington KOA RV campground is a wooded camping oasis in  Arlington  - the heart of the  Dallas-Fort Worth Metroplex  .  No RV? No problem! Enjoy a comfortable stay in one of our brand new full accommodation deluxe cabins or cozy  air-conditioned cabins  . Prefer more rustic accommodations? Try a grassy tent site. Your 4-legged friends will enjoy the off-leash dog park. Like all KOAs, we are  &amp;quot;Pet Friendly&amp;quot;  !  There&amp;amp;#39;s plenty to do during your camping stay with us. Our  Arlington, TX  area&amp;amp;#39;s many attractions include  Six Flags Over Texas, Hurricane Harbor  , the new  Legoland  and  Sealife  parks, the  Texas Rangers, Dallas Cowboys  and  &amp;quot;Ripley&amp;amp;#39;s Believe or Not&amp;quot;  museum in  Grand Prairie  . The list of things to do is endless, from  Legends of the Game  Baseball Museum, Planetarium at the University of Texas at  Arlington  , Stockyards Station and daily cattle drives in  Fort Worth  - plus museums and cultural fare. If dining is your pleasure, you&amp;amp;#39;ll enjoy the more than 200 restaurants within 2 miles of the campground.  Whatever your reason for visiting, our KOA&amp;amp;#39;s friendly staff will make sure you have a great stay. Come and see us- you&amp;amp;#39;ll be glad you did!",
+                    "length":3,
+                    "activity_type":{
+                        "created_at":"2012-08-15T17:31:31Z",
+                        "id":6,
+                        "name":"camping",
+                        "updated_at":"2012-08-15T17:31:31Z"
+                    },
+                    "thumbnail":"http:\/\/images.tripleblaze.com\/2011\/03\/3994-1300402308-0.jpg",
+                    "rank":null,
+                    "rating":5
+                }
+            ]
+        }
+    ]
+}
