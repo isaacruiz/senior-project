@@ -37,7 +37,7 @@ public class TestRequest extends AsyncTask<String, String, String> {
         this.latitude = lat;
         this.longitude = lon;
         this.callback = callback;
-        endpoint = endpoint + "/trails/explore";
+        //endpoint = endpoint + "/trails/explore";
         query = "?lat=" + latitude + "&lon=" + lon;
     }
 
@@ -54,11 +54,16 @@ public class TestRequest extends AsyncTask<String, String, String> {
             //Read result from API request
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String result = getJSonStringFromBuffer(br);
+            System.out.println("This is the result: " + result);
+
+            //Convert JSON result to TrailData class
             JSONObject json = new JSONObject(result);
             JSONArray places = json.getJSONArray("places");
-            TrailData td = new TrailData(places.getJSONObject(0));
-
-            System.out.println("This is the result: " + result);
+            for(int i = 0; i < places.length(); i++){
+                TrailData td = new TrailData(places.getJSONObject(i));
+                System.out.println("Trail data results:");
+                System.out.println(td.toString());
+            }
             return result;
         }
 

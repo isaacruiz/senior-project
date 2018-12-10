@@ -6,8 +6,6 @@ import org.json.JSONObject;
 
 public class TrailData {
 
-    //Recieves JSON string starting at result["places"][0]
-
     //Builds trail data from
     private String name;
     private double latitude;
@@ -41,15 +39,24 @@ public class TrailData {
         return longitude;
     }
 
-    public String getActivitiesString() throws JSONException {
+    public String getActivitiesString() {
         String s = "Activities:\n";
         JSONObject activity;
         for (int i = 0; i < activities.length(); i++) {
-            activity = activities.getJSONObject(i);
-            s +=  "Type:" + activity.getString("activity_type_name") + "\n";
-            s += "Desc:" + activity.getString("description") + "\n";
-            s += "Length: " + activity.getInt("length" + "miles\n\n");
+            try {
+                activity = activities.getJSONObject(i);
+                s +=  "Type:" + activity.getString("activity_type_name") + "\n";
+                s += "Desc:" + activity.getString("description") + "\n";
+                s += "Length: " + activity.getInt("length") + "miles\n\n";
+                return s;
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
-        return s;
+        return "Failed to convert data to trail data string!!";
+    }
+
+    public String toString(){
+        return name + " " + latitude + ", " + longitude + "\n" + getActivitiesString();
     }
 }

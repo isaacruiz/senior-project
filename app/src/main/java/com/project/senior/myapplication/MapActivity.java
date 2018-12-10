@@ -34,6 +34,7 @@ import com.mapbox.services.android.navigation.ui.v5.NavigationLauncherOptions;
 import com.mapbox.services.android.navigation.ui.v5.route.NavigationMapRoute;
 import com.mapbox.services.android.navigation.v5.navigation.NavigationRoute;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -57,6 +58,7 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
 
     public void completedRequest(String result) {
         System.out.println("Result from lat/lon request:" + result);
+        Log.i(TAG, "Result from callback: " + result);
 
     }
 
@@ -147,11 +149,15 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
         startButton.setEnabled(true);
         double dest_lat = destinationPosition.latitude();
         double dest_lon = destinationPosition.longitude();
+
+        //Get data for trails at picked location
+        List<TrailData> trails = new ArrayList<TrailData>();
         TestRequest latLonRequest  = new TestRequest(dest_lat, dest_lon, this);
         latLonRequest.execute();
 
         Toast.makeText(this, "Latitude:" + dest_lat + " Longitude:" + dest_lon, Toast.LENGTH_SHORT);
         System.out.println("latitude: " + destinationPosition.latitude() + " longitude: " + destinationPosition.longitude());
+        Log.i(TAG, "CLICKED ON MAP");
         startButton.setBackgroundResource(R.color.mapboxBlue);
 
     }
