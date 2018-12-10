@@ -1,7 +1,9 @@
 package com.project.senior.myapplication;
 
 import android.os.AsyncTask;
+import android.util.JsonReader;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -14,6 +16,8 @@ public class TestRequest extends AsyncTask<String, String, String> {
     private String city;
     private String state;
     private String country;
+    private double latitude;
+    private double longitude;
     private String endpoint = "https://trailapi-trailapi.p.mashape.com/";
     private String query;
     private String key = "&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
@@ -25,6 +29,16 @@ public class TestRequest extends AsyncTask<String, String, String> {
         this.country = country;
         this.callback = callback;
         query = "?q[city_cont]=" + city + "&q[country_cont]=" + country + "&q[state_cont]=" + state + "&radius=200";
+    }
+    public TestRequest(double lat, double lon, RequestCallback callback){
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.latitude = lat;
+        this.longitude = lon;
+        this.callback = callback;
+        endpoint = endpoint + "/trails/explore";
+        query = "?lat=" + latitude + "&lon=" + lon;
     }
 
 
@@ -41,7 +55,9 @@ public class TestRequest extends AsyncTask<String, String, String> {
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String result = getJSonStringFromBuffer(br);
             JSONObject json = new JSONObject(result);
-            String json_string = json.toString();
+            JSONArray places = json.getJSONArray("places");
+            TrailData td = new TrailData(places.getJSONObject(0));
+
             System.out.println("This is the result: " + result);
             return result;
         }
@@ -67,5 +83,7 @@ public class TestRequest extends AsyncTask<String, String, String> {
         }
         return buffer.toString();
     }
+
+    //Processes api request and returns a list of trail details, one entry per coordinate
 
 }

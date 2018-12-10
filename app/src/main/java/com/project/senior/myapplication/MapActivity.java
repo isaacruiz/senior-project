@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineListener;
@@ -39,7 +40,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MapActivity extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener, MapboxMap.OnMapClickListener {
+public class MapActivity extends AppCompatActivity implements RequestCallback, OnMapReadyCallback, LocationEngineListener, PermissionsListener, MapboxMap.OnMapClickListener {
 
     private MapView mapView;
     private MapboxMap map;
@@ -54,6 +55,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private NavigationMapRoute navigationMapRoute;
     private static final String TAG = "MapActivity";
 
+    public void completedRequest(String result) {
+        System.out.println("Result from lat/lon request:" + result);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +88,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(MapboxMap mapboxMap) {
         map = mapboxMap;
         map.addOnMapClickListener(this);
+        double [][] coordinates = {{26.1994, -98.3287},{26.2244, -98.3287}};
         enableLocation();
+        drawPins(coordinates);
 
     }
 
@@ -134,11 +141,17 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
 
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
-
         destinationPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
         originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
         getRoute(originPosition, destinationPosition);
         startButton.setEnabled(true);
+        double dest_lat = destinationPosition.latitude();
+        double dest_lon = destinationPosition.longitude();
+        TestRequest latLonRequest  = new TestRequest(dest_lat, dest_lon, this);
+        latLonRequest.execute();
+
+        Toast.makeText(this, "Latitude:" + dest_lat + " Longitude:" + dest_lon, Toast.LENGTH_SHORT);
+        System.out.println("latitude: " + destinationPosition.latitude() + " longitude: " + destinationPosition.longitude());
         startButton.setBackgroundResource(R.color.mapboxBlue);
 
     }
@@ -273,11 +286,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mapView.onDestroy();
     }
 
-    protected void drawPins(MapboxMap map, float[][] coordinates){
-        for (float[] coordinate: coordinates) {
+    protected void drawPins(double[][] coordinates){
+        for (double[] coordinate: coordinates) {
             map.addMarker(new MarkerOptions()
                     .position(new LatLng(coordinate[0], coordinate[1]))
-                    .title("Test Marker"));
+                    .title("Test Marker")
+                    .snippet("Hello world\nThis is a snippet\nblah blah blah\nAnd it has a lot of text blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah\nHello world\nThis is a snippet\nblah blah blah\nAnd it has a lot of text blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah\n"));
         }
 
     }
