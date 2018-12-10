@@ -19,6 +19,8 @@
     <color name="darkviolet_dark">#683dd4</color>
     <color name="violet">#D65AEE</color>
     <color name="violet_dark">#b33ec9</color>
-
     <color name="white">#FFFFFF</color>
+    <color name="mapboxWhite">#ffffff</color>
+    <color name="mapboxBlue">#4264fb</color>
+    <color name="mapboxGreyLight">#c6d2e1</color>
 </resources>

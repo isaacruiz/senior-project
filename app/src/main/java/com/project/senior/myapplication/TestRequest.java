@@ -42,7 +42,6 @@ public class TestRequest extends AsyncTask<String, String, String> {
             String result = getJSonStringFromBuffer(br);
             JSONObject json = new JSONObject(result);
             String json_string = json.toString();
-            System.out.println("This is the result: " + json_string);
             System.out.println("This is the result: " + result);
             return result;
         }

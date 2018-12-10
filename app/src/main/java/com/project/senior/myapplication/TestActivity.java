@@ -43,7 +43,6 @@ public class TestActivity extends Activity implements RequestCallback{
 
         TextView tv = (TextView)findViewById(R.id.textOutput);
         Button searchBtn = (Button)findViewById(R.id.searchBtn);
-        Button displayBtn = (Button)findViewById(R.id.displayBtn);
 
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
@@ -68,15 +67,7 @@ public class TestActivity extends Activity implements RequestCallback{
 
             }
         });
-        displayBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv.setText(response);
-            }
-        });
-
     }
-
 }
 
 /*
