@@ -2,6 +2,7 @@ package com.project.senior.myapplication;
 
 import android.os.AsyncTask;
 import android.util.JsonReader;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -10,8 +11,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
-public class TestRequest extends AsyncTask<String, String, String> {
+public class TestRequest extends AsyncTask<String, String, List<TrailData>> {
 
     private String city;
     private String state;
@@ -22,6 +25,7 @@ public class TestRequest extends AsyncTask<String, String, String> {
     private String query;
     private String key = "&mashape-key=7KsUvly5VOmsh9VDoPTll3vugdPVp1CPDGRjsnfyh3RQ3daUvm";
     private RequestCallback callback;
+    final String TAG = "Request";
 
     public TestRequest(String city, String state, String country, RequestCallback callback){
         this.city = city;
@@ -43,7 +47,7 @@ public class TestRequest extends AsyncTask<String, String, String> {
 
 
     @Override
-    protected String doInBackground(String... strings) {
+    protected List<TrailData> doInBackground(String... strings) {
         try {
             //Setup connection
             URL url = new URL(endpoint + query + key);
@@ -59,21 +63,27 @@ public class TestRequest extends AsyncTask<String, String, String> {
             //Convert JSON result to TrailData class
             JSONObject json = new JSONObject(result);
             JSONArray places = json.getJSONArray("places");
+            List<TrailData> trails = new ArrayList<TrailData>();
             for(int i = 0; i < places.length(); i++){
                 TrailData td = new TrailData(places.getJSONObject(i));
                 System.out.println("Trail data results:");
                 System.out.println(td.toString());
+                trails.add(td);
             }
-            return result;
+            //return result;
+            return trails;
         }
 
         catch(Exception e){
-            return (e.getMessage());
+
+            //return (e.getMessage());
+            Log.i(TAG, "Error in request:" + e.getMessage());
+            return null;
         }
     }
 
     @Override
-    protected void onPostExecute(String result) {
+    protected void onPostExecute(List<TrailData> result) {
         callback.completedRequest(result);
     }
 

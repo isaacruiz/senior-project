@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class TestActivity extends Activity implements RequestCallback{
+public class TestActivity extends Activity {//implements RequestCallback{ //Comment out to test Async callback with list of trails
 
 
     String country, city, state, result;
@@ -54,6 +54,7 @@ public class TestActivity extends Activity implements RequestCallback{
                 country = etCountry.getText().toString();
                 state = etState.getText().toString();
                 city = etCity.getText().toString();
+                /*//Comment to test Async List<TrailData> request
                 TestRequest tr = new TestRequest(city, state, country, new RequestCallback() {
                     @Override
                     public void completedRequest(String result) {
@@ -64,7 +65,7 @@ public class TestActivity extends Activity implements RequestCallback{
 
 
                 Log.d("Test", "Clicked search");
-
+                */
             }
         });
     }

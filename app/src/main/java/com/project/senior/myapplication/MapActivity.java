@@ -56,9 +56,18 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
     private NavigationMapRoute navigationMapRoute;
     private static final String TAG = "MapActivity";
 
-    public void completedRequest(String result) {
-        System.out.println("Result from lat/lon request:" + result);
-        Log.i(TAG, "Result from callback: " + result);
+    public void completedRequest(List<TrailData> result) {
+        //System.out.println("Result from lat/lon request:" + result);
+        //Log.i(TAG, "Result from callback: " + result);
+        Log.i(TAG, "Successfully completed request");
+        //Draw markers at trail locations
+        for(TrailData trail: result){
+            map.addMarker(new MarkerOptions()
+                    .position(new LatLng(trail.getLatitude(), trail.getLongitude()))
+                    .title(trail.getName())
+                    .snippet(trail.getActivitiesString()));
+
+        }
 
     }
 
@@ -144,8 +153,8 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
 
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
         destinationPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
-        getRoute(originPosition, destinationPosition);
+        //originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+        //getRoute(originPosition, destinationPosition);
         startButton.setEnabled(true);
         double dest_lat = destinationPosition.latitude();
         double dest_lon = destinationPosition.longitude();
