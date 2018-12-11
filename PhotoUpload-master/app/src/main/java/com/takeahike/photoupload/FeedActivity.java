@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -34,6 +36,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class FeedActivity extends AppCompatActivity {
+
+    final String TAG = this.getClass().getName();
 
     FirebaseUser fbUser;
     DatabaseReference database;
@@ -224,5 +228,34 @@ public class FeedActivity extends AppCompatActivity {
                 database.child("likes").child(image.userLike).removeValue();
             }
         }
+    }
+
+    boolean twice = false;
+
+    @Override
+    public void onBackPressed() {
+
+        Log.d(TAG, "click");
+
+        if(twice == true){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            System.exit(0);
+        }
+        twice = true;
+        Log.d(TAG, "twice: " + twice);
+
+        Toast.makeText(FeedActivity.this, "Please press BACK again to exit", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                twice = false;
+                Log.d(TAG, "twice: " + twice);
+            }
+        }, 3000);
+//        super.onBackPressed();
     }
 }
