@@ -1,13 +1,19 @@
 package com.takeahike.photoupload;
 
 import android.content.Intent;
+import android.nfc.Tag;
+import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -15,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 public class MainActivity extends AppCompatActivity {
+
+//    final String TAG = this.getClass().getName();
 
     DatabaseReference database;
 
@@ -52,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 RC_SIGN_IN);
     }
 
+
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -84,4 +95,33 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+//    boolean twice = false;
+//
+//    @Override
+//    public void onBackPressed() {
+//
+//        Log.d(TAG, "click");
+//
+//        if(twice == true){
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.addCategory(Intent.CATEGORY_HOME);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            startActivity(intent);
+//            finish();
+//            System.exit(0);
+//        }
+//        twice = true;
+//        Log.d(TAG, "twice: " + twice);
+//
+//        Toast.makeText(MainActivity.this, "Please press BACK again to exit", Toast.LENGTH_SHORT).show();
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                twice = false;
+//                Log.d(TAG, "twice: " + twice);
+//            }
+//        }, 3000);
+////        super.onBackPressed();
+//    }
 }
