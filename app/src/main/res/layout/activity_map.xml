@@ -22,24 +22,39 @@
         android:id="@+id/mapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_toStartOf="@+id/editText"
-        android:layout_toLeftOf="@+id/editText"
-        android:text="search"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
+        android:layout_marginStart="24dp"
+        android:layout_toStartOf="@+id/cityText"
+        android:layout_toLeftOf="@+id/cityText"
+        android:text="@string/search_button"
+        app:layout_constraintBottom_toBottomOf="@+id/stateText"
+        app:layout_constraintStart_toEndOf="@+id/stateText" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:id="@+id/cityText"
+        android:layout_width="81dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="@string/search_placeholder"
+        android:hint="@string/city"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/stateText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/stateText"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/state"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/cityText"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/startButton"

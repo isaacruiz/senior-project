@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mapbox.android.core.location.LocationEngine;
@@ -46,6 +47,7 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
     private MapView mapView;
     private MapboxMap map;
     private Button startButton;
+    private Button mapButton;
     private PermissionsManager permissionsManager;
     private LocationEngine locationEngine;
     private LocationLayerPlugin locationLayerPlugin;
@@ -61,14 +63,13 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
         //Log.i(TAG, "Result from callback: " + result);
         Log.i(TAG, "Successfully completed request");
         //Draw markers at trail locations
+        boolean movedCamera = false;
         for(TrailData trail: result){
             map.addMarker(new MarkerOptions()
                     .position(new LatLng(trail.getLatitude(), trail.getLongitude()))
                     .title(trail.getName())
                     .snippet(trail.getActivitiesString()));
-
         }
-
     }
 
     @Override
@@ -78,6 +79,7 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
         setContentView(R.layout.activity_map);
         mapView = findViewById(R.id.mapView);
         startButton = findViewById(R.id.startButton);
+        mapButton = findViewById(R.id.mapBtn);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
@@ -93,16 +95,23 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
                 NavigationLauncher.startNavigation(MapActivity.this, options);
             }
         });
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText cet = (EditText)findViewById(R.id.cityText);
+                EditText set = (EditText)findViewById(R.id.stateText);
+                String city = cet.getText().toString();
+                String state = set.getText().toString();
+                TestRequest request = new TestRequest(city, state, "United States",MapActivity.this);
+            }
+        });
     }
 
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         map = mapboxMap;
         map.addOnMapClickListener(this);
-        double [][] coordinates = {{26.1994, -98.3287},{26.2244, -98.3287}};
         enableLocation();
-        drawPins(coordinates);
-
     }
 
     private void enableLocation() {
@@ -299,15 +308,5 @@ public class MapActivity extends AppCompatActivity implements RequestCallback, O
             locationEngine.deactivate();
         }
         mapView.onDestroy();
-    }
-
-    protected void drawPins(double[][] coordinates){
-        for (double[] coordinate: coordinates) {
-            map.addMarker(new MarkerOptions()
-                    .position(new LatLng(coordinate[0], coordinate[1]))
-                    .title("Test Marker")
-                    .snippet("Hello world\nThis is a snippet\nblah blah blah\nAnd it has a lot of text blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah\nHello world\nThis is a snippet\nblah blah blah\nAnd it has a lot of text blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah\n"));
-        }
-
     }
 }
